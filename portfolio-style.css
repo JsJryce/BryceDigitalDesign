@@ -1,28 +1,33 @@
-
+/* ===== Reset some default browser styles ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
+/* ===== Body & Font ===== */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #3a7bd5, #00d2ff); 
-  color: #f1f1f1;
-  line-height: 1.6;
-  padding: 20px;
+  color: #fff;
+  margin: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 
 
+/* ===== Container Layout ===== */
 header, nav, main, footer {
   max-width: 900px;
   margin: 0 auto 40px auto;
   padding: 0 15px;
 }
 
-
+/* ===== Header ===== */
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -32,16 +37,16 @@ header h1 {
   font-weight: 600;
   font-size: 2.8rem;
   margin-bottom: 10px;
-  color: #222;
+  color: rgb(255, 255, 255);
 }
 
 header p {
   font-weight: 400;
   font-size: 1.1rem;
-  color: #666;
+  color: rgb(255, 255, 255);
 }
 
-
+/* ===== Navigation ===== */
 nav {
   display: flex;
   justify-content: center;
@@ -54,14 +59,14 @@ nav {
 nav a {
   text-decoration: none;
   font-weight: 600;
-  color: #555;
+  color: rgb(245, 229, 229);
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 nav a:hover,
 nav a:focus {
-  color: #0078d7; 
+  color: #dccc4f; /* Xbox-ish blue */
   outline: none;
 }
 
@@ -72,16 +77,16 @@ main {
 }
 
 
-
+/* ===== Main Content Sections ===== */
 main section {
   background-color: #fff;
-  padding: 20px 24px;      
-  margin-bottom: 25px;    
+  padding: 20px 24px;      /* reduced padding */
+  margin-bottom: 25px;     /* less spacing between sections */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+/* ===== Zoom-In on Entire Section Hover ===== */
 main section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -105,7 +110,7 @@ main section p {
   margin-bottom: 20px;
 }
 
-
+/* ===== Images Styling ===== */
 main section img {
   display: block;
   max-width: 100%;
@@ -116,7 +121,7 @@ main section img {
 }
 
 
-
+/* ===== For sections with multiple images ===== */
 main section.multiple-images img {
   display: inline-block;
   width: 48%;
@@ -124,7 +129,7 @@ main section.multiple-images img {
   vertical-align: top;
 }
 
-
+/* ===== Footer ===== */
 footer {
   text-align: center;
   font-size: 0.9rem;
@@ -133,7 +138,7 @@ footer {
   border-top: 1px solid #ddd;
 }
 
-
+/* ===== Responsive ===== */
 @media (max-width: 700px) {
   nav {
     flex-direction: column;
