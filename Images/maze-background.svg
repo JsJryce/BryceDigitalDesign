@@ -1,0 +1,10 @@
+<!-- maze-background.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#0d0d0d" />
+  <g stroke="#00ffc3" stroke-width="2" fill="none" stroke-linecap="square" opacity="0.05">
+    <path d="M20 20 H780 V780 H20 Z" />
+    <path d="M60 60 H740 V740 H60 Z" />
+    <path d="M60 100 H100 V300 H200 V100 H300 V300 H400 V100 H500 V300 H600 V100 H700 V300" />
+    <path d="M100 500 H700 V600 H600 V700 H500 V600 H400 V700 H300 V600 H200 V700 H100" />
+  </g>
+</svg>
