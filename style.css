@@ -26,13 +26,14 @@ nav {
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 10px 0;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 8px 20px;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 6px;
@@ -45,7 +46,7 @@ nav a:hover {
 }
 
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -75,6 +76,34 @@ p {
     color: #ffffff;
 }
 
+/* ===== Image Styles ===== */
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Grid for Sections with Multiple Images ===== */
+.multi-image-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.multi-image-section img {
+    flex: 1 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+    transition: transform 0.3s ease;
+}
+
+.multi-image-section img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== Footer ===== */
 footer {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
@@ -86,7 +115,42 @@ footer {
     font-size: 0.9em;
 }
 
-@media (max-width: 600px) {
+/* ===== Floating Images (Corners) ===== */
+.corner-image, .other-corner-image {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    z-index: 9999;
+    text-align: center;
+    pointer-events: none;
+}
+
+.corner-image {
+    right: 4.5px;
+}
+
+.other-corner-image {
+    left: 4.5px;
+}
+
+.corner-image img,
+.other-corner-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.corner-image figcaption,
+.other-corner-image figcaption {
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 3px;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
     header h1 {
         font-size: 1.8em;
     }
@@ -111,52 +175,9 @@ footer {
     .other-corner-image {
         display: none;
     }
-}
 
-.corner-image {
-    position: fixed;
-    top: 50%;
-    right: 4.5px;
-    transform: translateY(-50%);
-    width: 300px;
-    z-index: 9999;
-    text-align: center;
-    pointer-events: none;
-}
-
-.corner-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.corner-image figcaption {
-    font-size: 0.8em;
-    color: #555;
-    margin-top: 3px;
-}
-
-.other-corner-image {
-    position: fixed;
-    top: 50%;
-    left: 4.5px;
-    transform: translateY(-50%);
-    width: 300px;
-    z-index: 9999;
-    text-align: center;
-    pointer-events: none;
-}
-
-.other-corner-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.other-corner-image figcaption {
-    font-size: 0.8em;
-    color: #555;
-    margin-top: 3px;
+    .multi-image-section img {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
 }
